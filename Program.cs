@@ -12,6 +12,7 @@ builder.Services.AddDbContextFactory<PizzaStoreContext>(opt =>
     opt.UseSqlite($"Data Source=pizza.db"));
 
 builder.Services.AddSingleton<SpecialsService>();
+builder.Services.AddScoped<OrderState>();
 
 var app = builder.Build();
 
